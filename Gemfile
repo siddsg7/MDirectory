@@ -44,3 +44,21 @@ group :development, :test do
   gem 'spring'
 end
 
+
+gem 'bootstrap', '~> 4.0.0.alpha3.1'
+gem 'devise'
+gem 'high_voltage'
+gem 'therubyracer', :platform=>:ruby
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller', :platforms=>[:mri_21]
+  gem 'rails_apps_pages'
+  gem 'rails_layout'
+end
+
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-rescue'
+end
+
