@@ -16,6 +16,10 @@ gem 'high_voltage'
 gem 'omniauth'
 gem 'omniauth-linkedin'
 gem 'therubyracer', :platform=>:ruby
+
+# gem 'matcher'
+gem 'paperclip'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]

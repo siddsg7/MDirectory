@@ -11,7 +11,64 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161105180758) do
+ActiveRecord::Schema.define(version: 20161105192055) do
+
+  create_table "certifications", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "doctors", force: :cascade do |t|
+    t.string   "full_name"
+    t.integer  "certification_id"
+    t.integer  "hospital_id"
+    t.string   "resume"
+    t.integer  "target_salary"
+    t.string   "specialty"
+    t.string   "pref_title"
+    t.string   "education"
+    t.integer  "post_id"
+    t.integer  "phone_number"
+    t.string   "email"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
+
+  add_index "doctors", ["certification_id"], name: "index_doctors_on_certification_id"
+  add_index "doctors", ["hospital_id"], name: "index_doctors_on_hospital_id"
+  add_index "doctors", ["post_id"], name: "index_doctors_on_post_id"
+
+  create_table "posts", force: :cascade do |t|
+    t.integer  "owner_id"
+    t.integer  "offering_salary"
+    t.string   "location"
+    t.text     "body"
+    t.string   "title"
+    t.text     "related_posts"
+    t.string   "demand"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "posts", ["owner_id"], name: "index_posts_on_owner_id"
+
+  create_table "recruiters", force: :cascade do |t|
+    t.string   "full_name"
+    t.string   "organization"
+    t.integer  "offering_salary"
+    t.integer  "open_positions"
+    t.string   "searching_for"
+    t.string   "phone_number"
+    t.string   "demand"
+    t.string   "email"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

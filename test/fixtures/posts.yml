@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  owner_id: 
+  offering_salary: 
+  location: MyString
+  body: MyText
+  title: MyString
+  related_posts: MyText
+  demand: MyString
+
+two:
+  owner_id: 
+  offering_salary: 
+  location: MyString
+  body: MyText
+  title: MyString
+  related_posts: MyText
+  demand: MyString

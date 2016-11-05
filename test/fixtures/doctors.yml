@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  full_name: MyString
+  certification_id: 
+  hospital_id: 
+  resume: MyString
+  target_salary: 
+  specialty: MyString
+  pref_title: MyString
+  education: MyString
+  post_id: 
+
+two:
+  full_name: MyString
+  certification_id: 
+  hospital_id: 
+  resume: MyString
+  target_salary: 
+  specialty: MyString
+  pref_title: MyString
+  education: MyString
+  post_id: 

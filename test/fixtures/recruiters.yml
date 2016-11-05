@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  full_name: MyString
+  organization: MyString
+  offering_salary: 
+  open_positions: 
+  searching_for: MyString
+  phone_number: MyString
+  demand: MyString
+
+two:
+  full_name: MyString
+  organization: MyString
+  offering_salary: 
+  open_positions: 
+  searching_for: MyString
+  phone_number: MyString
+  demand: MyString
