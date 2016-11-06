@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Standing Contracts</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Hospital</th>
+      <th>Offering salary</th>
+      <th>Location</th
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= link_to post.title, post %></td>
+        <td><%= post.hospital %></td>
+        <td>&#36;<%= number_with_delimiter(post.offering_salary, :delimiter => ',') %></td>
+        <td><%= post.location %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Post', new_post_path, class:"btn btn-default", style:"text-align:center;" %>

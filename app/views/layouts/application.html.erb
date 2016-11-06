@@ -5,16 +5,33 @@
     <title><%= content_for?(:title) ? yield(:title) : "Experimental" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Experimental" %>">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
+    <%= stylesheet_link_tag 'landing-page' %>
+    <%= stylesheet_link_tag 'signin' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
     <%= csrf_meta_tags %>
   </head>
   <body>
+
     <header>
       <%= render 'layouts/navigation' %>
     </header>
-    <main role="main">
+
+    <main role="main" style="margin-top:0;width:100%;padding-left:0;padding-right:0;">
        <%= render 'layouts/messages' %>
        <%= yield %>
     </main>
+
+
+
   </body>
+  <footer style="position:relative;bottom:0;padding-top:10px;width:100%;text-align:center">
+      <div class="container" style="display:inline-block">
+          <div class="row">
+              <div class="col-lg-12">
+                  <a href="/">Home</a>&sdot;<a href="/about">About</a>
+                  <p class="copyright text-muted small">Copyright &copy; MDirectory 2016. All Rights Reserved</p>
+              </div>
+          </div>
+      </div>
+  </footer>
 </html>
